@@ -13,6 +13,7 @@
 
 <div class="timer_settings">
   <div class="timer__duration input-group">
+    <span class="timer__title">timer__duration</span>
     <select name="timer__duration" [(ngModel)]="time" id="timer__duration">
       <option value="900000">15</option>
       <option value="1200000">20</option>
@@ -24,6 +25,7 @@
     </select>
   </div>
   <div class="timer__break input-group">
+    <span class="timer__title">timer__break</span>
     <select name="timer__break" [(ngModel)]="break" id="timer__break">
       <option value="180000">3</option>
       <option value="240000">4</option>
@@ -31,6 +33,7 @@
     </select>
   </div>
   <div class="timer__long_break input-group">
+    <span class="timer__title">timer__long_break</span>
     <select name="timer__long_break" [(ngModel)]="longBreak" id="timer__long_break">
       <option value="600000">10</option>
       <option value="900000">15</option>

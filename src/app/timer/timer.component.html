@@ -1,0 +1,43 @@
+<div class="timer">
+  <div class="timer__header">
+    <div class="title">Timer {{timerStatus}}</div>
+  </div>
+  <div class="timer__body">
+    {{timeStatus | time}}
+  </div>
+  <div class="timer__footer">
+    <button (click)="switchTimer()" *ngIf="!this.interval" class="btn btn-primary">Start timer</button>
+    <button (click)="stop()" *ngIf="this.interval" class="btn btn-secondary"> Stop timer</button>
+  </div>
+</div>
+
+<div class="timer_settings">
+  <div class="timer__duration input-group">
+    <select name="timer__duration" [(ngModel)]="time" id="timer__duration">
+      <option value="900000">15</option>
+      <option value="1200000">20</option>
+      <option value="1500000">25</option>
+      <option value="1800000">30</option>
+      <option value="2100000">35</option>
+      <option value="2400000">40</option>
+      <option value="2700000">45</option>
+    </select>
+  </div>
+  <div class="timer__break input-group">
+    <select name="timer__break" [(ngModel)]="break" id="timer__break">
+      <option value="180000">3</option>
+      <option value="240000">4</option>
+      <option value="300000">5</option>
+    </select>
+  </div>
+  <div class="timer__long_break input-group">
+    <select name="timer__long_break" [(ngModel)]="longBreak" id="timer__long_break">
+      <option value="600000">10</option>
+      <option value="900000">15</option>
+      <option value="1200000">20</option>
+      <option value="1500000">25</option>
+      <option value="1800000">30</option>
+      <option value="2100000">35</option>
+    </select>
+  </div>
+</div>
